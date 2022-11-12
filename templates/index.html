@@ -1,0 +1,28 @@
+<html>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>hello world</h1>
+    <!-- {{ display_date }} <br> -->
+    <!-- {{ name}} <br> -->
+    <!-- {{ greeting}} <br> -->
+    <!-- <img src="{% static 'img/84248.png' %}" alt="image"> -->
+
+    {% if emp_list %}
+    <table>
+    {% for employee in emp_list %}
+    <tr>
+        <td>{{employee.empno}}</td>
+        <td>{{employee.empname}}</td>   
+        <td>{{employee.empsalary}}</td>
+        <td>{{employee.empaddress}}</td>
+        
+    </tr>
+    {% endfor %}
+    {% endif %}
+    
+    </table>
+</body>
+</html>
